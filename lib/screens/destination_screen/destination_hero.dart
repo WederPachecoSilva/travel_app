@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:travel_app/models/destination_model.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:travel_app/screens/destination_screen/destination_screen_app_bar.dart';
 
 class DestinationHero extends StatelessWidget {
   final Destination destination;
@@ -39,36 +40,7 @@ class DestinationHero extends StatelessWidget {
             ),
           ),
         ),
-        Padding(
-          padding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 40.0),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: <Widget>[
-              IconButton(
-                icon: Icon(Icons.arrow_back),
-                iconSize: 30.0,
-                color: Colors.black,
-                onPressed: () => Navigator.pop(context),
-              ),
-              Row(
-                children: <Widget>[
-                  IconButton(
-                    icon: Icon(Icons.search),
-                    iconSize: 30.0,
-                    color: Colors.black,
-                    onPressed: () => Navigator.pop(context),
-                  ),
-                  IconButton(
-                    icon: Icon(FontAwesomeIcons.sortAmountDown),
-                    iconSize: 25.0,
-                    color: Colors.black,
-                    onPressed: () => Navigator.pop(context),
-                  ),
-                ],
-              ),
-            ],
-          ),
-        ),
+        DestinationScreenAppBar(),
         Positioned(
           left: 20.0,
           bottom: 20.0,
